@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather app</title>
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <div class="weatherError hidden">
+          <i class="fas fa-exclamation-circle"></i>
+          <span>Ciudad no encontrada</span>
+        </div>
+        <div class="weatherSearch__container">
+          <input
+            class="weatherSearch"
+            type="text"
+            placeholder="Ingrese una ciudad..."
+          />
+          <i class="fas fa-search weatherSearchButton"></i>
+        </div>
+      </section>
+      <section class="topCities hidden">
+        <h1>Top Cities:</h1>
+        <div class="topCities__flex">
+          <div class="top__container">
+            <span class="weatherCityName weatherCityName1"></span>
+            <span class="weatherCountry weatherCountry1"></span>
+            <div class="top__container-mid">
+              <div>
+                <div class="degrees__container">
+                  <span class="weatherDegrees weatherDegrees1"></span
+                  ><span>°</span>
+                </div>
+                <p class="weatherDescription weatherDescription1">Nublado</p>
+              </div>
+              <img class="weatherIcon weatherIcon1" />
+            </div>
+            <div class="top__container-bottom">
+              <div class="min-max__container">
+                <span class="bold-text">min: </span
+                ><span class="weatherMin weatherMin1"></span><br />
+                <span class="bold-text">max: </span
+                ><span class="weatherMax weatherMax1"></span>
+              </div>
+              <div class="real-feel__container">
+                <span class="bold-text">Real Feel: </span
+                ><span class="weatherRealFeel weatherRealFeel1"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="top__container">
+            <span class="weatherCityName weatherCityName2"></span>
+            <span class="weatherCountry weatherCountry2"></span>
+            <div class="top__container-mid">
+              <div>
+                <div class="degrees__container">
+                  <span class="weatherDegrees weatherDegrees2"></span
+                  ><span>°</span>
+                </div>
+                <p class="weatherDescription weatherDescription2">Nublado</p>
+              </div>
+              <img class="weatherIcon weatherIcon2" />
+            </div>
+            <div class="top__container-bottom">
+              <div class="min-max__container">
+                <span class="bold-text">min: </span
+                ><span class="weatherMin weatherMin2"></span><br />
+                <span class="bold-text">max: </span
+                ><span class="weatherMax weatherMax2"></span>
+              </div>
+              <div class="real-feel__container">
+                <span class="bold-text">Real Feel: </span
+                ><span class="weatherRealFeel weatherRealFeel2"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="top__container">
+            <span class="weatherCityName weatherCityName3"></span>
+            <span class="weatherCountry weatherCountry3"></span>
+            <div class="top__container-mid">
+              <div>
+                <div class="degrees__container">
+                  <span class="weatherDegrees weatherDegrees3"></span
+                  ><span>°</span>
+                </div>
+                <p class="weatherDescription weatherDescription3">Nublado</p>
+              </div>
+              <img class="weatherIcon weatherIcon3" />
+            </div>
+            <div class="top__container-bottom">
+              <div class="min-max__container">
+                <span class="bold-text">min: </span
+                ><span class="weatherMin weatherMin3"></span><br />
+                <span class="bold-text">max: </span
+                ><span class="weatherMax weatherMax3"></span>
+              </div>
+              <div class="real-feel__container">
+                <span class="bold-text">Real Feel: </span
+                ><span class="weatherRealFeel weatherRealFeel3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>Detalles:</h1>
+        <p>Zona:</p>
+        <span class="weatherDetailsZone">Argentina/Tucuman</span>
+      </div>
+      <div class="overlay hidden"></div>
+      <section class="resultSection__flex">
+        <div class="weather__container">
+          <div class="resultCurrent__div">
+            <section class="resultSection hidden">
+              <div class="top__container">
+                <i class="fas fa-info-circle infoIcon"></i>
+                <span class="weatherCityName weatherCityNameResult"></span>
+                <span class="weatherCountry weatherCountryResult"></span>
+                <div class="top__container-mid">
+                  <div>
+                    <div class="degrees__container">
+                      <span class="weatherDegrees weatherDegreesResult"></span
+                      ><span>°</span>
+                    </div>
+                    <p class="weatherDescription weatherDescriptionResult">
+                      Nublado
+                    </p>
+                  </div>
+                  <img class="weatherIcon weatherIconResult" />
+                </div>
+                <div class="top__container-bottom">
+                  <div class="min-max__container">
+                    <span class="bold-text">min: </span
+                    ><span class="weatherMin weatherMinResult"></span><br />
+                    <span class="bold-text">max: </span
+                    ><span class="weatherMax weatherMaxResult"></span>
+                  </div>
+                  <div class="real-feel__container">
+                    <span class="bold-text">Real Feel: </span
+                    ><span class="weatherRealFeel weatherRealFeelResult"></span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="dailyWeather hidden">
+              <div class="dailyWeather__container">
+                <div class="dailyDiv">
+                  <span class="weatherDay1">Lun</span>
+                  <img class="weatherDayIcon1" src="assets/01d.svg" />
+                </div>
+                <div class="dailyDiv border-left">
+                  <span class="weatherDay2">Mar</span>
+                  <img class="weatherDayIcon2" src="assets/01d.svg" />
+                </div>
+                <div class="dailyDiv border-left">
+                  <span class="weatherDay3">Mie</span>
+                  <img class="weatherDayIcon3" src="assets/01d.svg" />
+                </div>
+                <div class="dailyDiv border-left">
+                  <span class="weatherDay4">Jue</span>
+                  <img class="weatherDayIcon4" src="assets/03d.svg" />
+                </div>
+                <div class="dailyDiv border-left">
+                  <span class="weatherDay5">Vie</span>
+                  <img class="weatherDayIcon5" src="assets/09d.svg" />
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <section class="hourlyWeather">
+          <div class="hourlyWeather__container"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/106966e592.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
