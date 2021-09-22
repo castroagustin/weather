@@ -13,8 +13,7 @@ body {
     #5f7da0 0.01%,
     #2a4667 100%
   );
-  margin-top: 100px;
-  transition: background 10s;
+  margin-top: 160px;
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -27,7 +26,7 @@ body {
   width: 100%;
   background-color: #728eae;
   padding: 10px;
-  margin-top: -100px;
+  margin-top: -160px;
 }
 
 .topCities {
